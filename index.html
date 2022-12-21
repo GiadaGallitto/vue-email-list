@@ -21,8 +21,8 @@
                     </div>
                     <div class="col-12">
                         <ul v-for="randomEmail in emailList">
-                            <li v-show="randomEmail != null">
-                                {{ randomEmail }}
+                            <li v-show="randomEmail != null ">
+                                {{ (emailList.length >= 10) ? randomEmail : `Sto caricando la lista` }}
                             </li>
                         </ul>
                     </div>
