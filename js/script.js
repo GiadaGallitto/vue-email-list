@@ -9,8 +9,7 @@ createApp({
     },
 
     methods: {
-        getRandomEmail() {
-        }
+
     },
     
     mounted(){       
