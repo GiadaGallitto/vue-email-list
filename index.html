@@ -15,12 +15,18 @@
     <body>
         <div id="app">
             <main>
-                <h1>Email List</h1>
-                <ul>
-                    <li v-show="randomEmail != null">
-                        {{ randomEmail }}
-                    </li>
-                </ul>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h1>Email List</h1>
+                    </div>
+                    <div class="col-12">
+                        <ul v-for="randomEmail in emailList">
+                            <li v-show="randomEmail != null">
+                                {{ randomEmail }}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </main>
         </div>
 
