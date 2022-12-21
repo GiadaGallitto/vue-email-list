@@ -19,10 +19,13 @@
                     <div class="col-12 text-center">
                         <h1>Email List</h1>
                     </div>
-                    <div class="col-12">
-                        <ul v-for="randomEmail in emailList">
-                            <li v-show="randomEmail != null ">
-                                {{ (emailList.length >= 10) ? randomEmail : `Sto caricando la lista` }}
+                    <div class="col-12" v-if="(emailList.length < 10)">
+                        <h2>Sto caricando la lista</h2>
+                    </div>
+                    <div v-else class="col-12">
+                        <ul>
+                            <li v-for="randomEmail in emailList" v-show="randomEmail != null ">
+                                {{ randomEmail }}
                             </li>
                         </ul>
                     </div>
